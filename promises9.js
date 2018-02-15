@@ -20,11 +20,11 @@ let promise3 = new Promise((resolve, reject)=>{
 	}, 300);
 });
 
-var allPromises = [promise1, promise2];
+var allPromises = [promise1, promise2, promise3];
 
 Promise.all(allPromises).then((values)=>{
         console.log(values);
-}, (error)={
+}, (error)=>{
 	console.log(error)
 });
 

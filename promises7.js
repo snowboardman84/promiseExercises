@@ -3,23 +3,26 @@
 
 //let's mock an async event with a timeout
 
+//this data object is useless
 var data = {
 	nation:"Belgium"
 }
 
+//this is defining your Promise function, which is name promise
 let promise = new Promise((resolve, reject)=>{
 	setTimeout(()=>{
-		resolve({
-			data: {
-				nation: "Zamunda",
-				crownPrince: "Akeem"
-			}
-		});
-	}, 1000);
-
+		var data = "thing";
+		resolve(data);
+	}, 2000);
 });
 
-console.log(data.crownPrince);
+//this is how you excute your promise function
+promise.then((t)=> {
+	console.log(t);
+}, ()=>{
+	console.log("rejected");
+});
+
 
 //i've tried to use the data in a synchronous fashion, but the crown prince is undefined! (run the code to see) Oh no, let's fix that. 
 //use the promise to console log the crown prince (don't actually modify the promise variable itself, use then() to

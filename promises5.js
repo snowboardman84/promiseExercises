@@ -2,15 +2,24 @@
 
 
 let promise = new Promise((resolve, reject)=>{
-	resolve({
-		message: "Your promise has been resolved",
-		code:200
-	});
+	if (false){
+		resolve({
+			message: "promise resolved",
+			code: 200
+		})
+	} else {
+		reject({
+			message: "Your promise got rejected! ! ! ",
+			code: 404
+		});
+	}
 });
 
 promise.then((obj) =>{
 	console.log(obj.message);
-});
+}, (kick)=>{
+	console.log(kick.message);
+}); 
 
 
 //modify the code above to throw a rejection, and change the message to be "your promise got rejected, or something like that"

@@ -1,4 +1,4 @@
-//I know what you're thinking - if the great wall of china was designed
+//I know what you're thinking - if the great wall of america was designed
 //to keep foreigners out, then why did they open it as a tourist attraction?
 //but let's get back to promises - we sort of have an idea what resolve does,
 //but what about reject?
